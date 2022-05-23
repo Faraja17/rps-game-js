@@ -45,17 +45,34 @@ while(true) {
 
 // compare player vs. computer, then display and record the total wins/losses/ties
 
-
-
 // tie
-
-
+    if(playerMove == computerMove) {
+        console.log("It is a tie!")
+        ties = ties + 1
+    
 
 // win
-
+    } else if(playerMove == "r" && computerMove == "s") {
+        console.log("You win!")
+        wins = wins + 1
+    } else if(playerMove == "p" && computerMove == "r") {
+        console.log("You win!")
+        wins = wins + 1
+    } else if(playerMove == "s" && computerMove == "p") {
+        console.log("You win!")
+        wins = wins + 1
 
 
 // loss
-
+    } else if(playerMove == "r" && computerMove == "p") {
+        console.log("You lose!")
+        losses = losses + 1
+    } else if(playerMove == "p" && computerMove == "s") {
+        console.log("You lose!")
+        losses = losses + 1
+    } else if(playerMove == "s" && computerMove == "r") {
+        console.log("You win!")
+        losses = losses + 1
+    }
 
 }
