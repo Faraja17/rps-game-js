@@ -2,6 +2,7 @@
 var wins = 0;
 var losses = 0;
 var ties = 0;
+var computerMove = "";
 
 // outer main game loop
 while(true) {
@@ -14,7 +15,6 @@ while(true) {
         var playerMove = prompt("Enter your move: (r)ock (p)aper (s)cissors or (q)uit", "");
         if(playerMove == "q"){ // quit program if player selects q
             console.log("Thank you for playing!");
-            break aLoop;
         } else if(playerMove == "r" || playerMove === "p" || playerMove === "s"){
             break aLoop;// break out of player loop if r, p, or s, is selected, otherwise remind to select one.
         }
@@ -30,10 +30,18 @@ while(true) {
         console.log("SCISSORS versus. . .");
     }
 
-
 // display what the computer chose
-
-
+    let randomNumber = Math.floor(Math.random() * 3);
+    if(randomNumber === 0) {
+        computerMove = "r";
+        console.log("ROCK");
+    } else if(randomNumber === 1) {
+        computerMove = "p";
+        console.log("PAPER");
+    } else if(randomNumber === 2) {
+        computerMove = "s";
+        console.log("SCISSORS");
+    }
 
 // compare player vs. computer, then display and record the total wins/losses/ties
 
