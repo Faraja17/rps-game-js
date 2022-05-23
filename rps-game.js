@@ -1,11 +1,18 @@
 // variables to keep track of the number of wins, losses, and ties
-
+var wins = 0;
+var losses = 0;
+var ties = 0;
 
 // outer main game loop
+while(true) {
+    console.log("" + wins + " Wins " + "" + losses + " Losses " + "" + ties + " Ties ");
 
 
 // inner player input loop
-
+    while(true) {
+        console.log("Enter your move: (r)ock (p)aper (s)cissors or (q)uit");
+        let playerMove = input();
+    }    
 
 // quit program if player selects q
 
@@ -34,3 +41,6 @@
 
 
 // loss
+
+
+}
