@@ -13,7 +13,7 @@ while(true) {
     aLoop:
     while(true) {
         var playerMove = prompt("Enter your move: (r)ock (p)aper (s)cissors or (q)uit", "");
-        if(playerMove == "q"){ // quit program if player selects q
+        if(playerMove == "q"){ // quit program if player selects q--haven't figured this out yet.
             console.log("Thank you for playing!");
         } else if(playerMove == "r" || playerMove === "p" || playerMove === "s"){
             break aLoop;// break out of player loop if r, p, or s, is selected, otherwise remind to select one.
