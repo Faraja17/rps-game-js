@@ -17,8 +17,9 @@ while(true) {
             console.log("Thank you for playing!");
         } else if(playerMove == "r" || playerMove === "p" || playerMove === "s"){
             break aLoop;// break out of player loop if r, p, or s, is selected, otherwise remind to select one.
+        } else {
+            console.log("Type one of r, p, s, or q.");
         }
-        console.log("Type one of r, p, s, or q.");
     }    
 
 // display what the player chose
