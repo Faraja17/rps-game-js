@@ -6,7 +6,6 @@ Descripton: I am currently studying Python by reading and coding along with [Al 
 
 - [Overview](#overview)
   - [Screencast](#screencast)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -26,11 +25,6 @@ The biggest challenge of this project was translating a program written in Pytho
 |:--:|
 | [![Link to video of execution](https://raw.githubusercontent.com/Faraja17/rps-game-js/main/screenshot%20of%20video.png)](https://screencast-o-matic.com/watch/c3hZckVr5kE) |
 | [Direct Link to Video](https://screencast-o-matic.com/watch/c3hZckVr5kE)|
-
-
-### Links
-
-- Live Site URL: [name of site](URL)
 
 ## My process
 
