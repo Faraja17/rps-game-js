@@ -5,7 +5,7 @@ Descripton: I am currently studying Python by reading and coding along with [Al 
 ## Table of contents
 
 - [Overview](#overview)
-  - [Screenshots](#screenshots)
+  - [Screencast](#screencast)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -18,22 +18,14 @@ Descripton: I am currently studying Python by reading and coding along with [Al 
 
 ## Overview
 
+The biggest challenge of this project was translating a program written in Python to JavaScript. Through this project, I learned the importance of careful planning, and how to approach breaking the plan into clear and concise steps for readability and clean coding.  This serves as my first original JavaScript project!
 
+### Screencast
 
-
-### Screenshots
-| <b>Mobile View</b>| 
+| <b>Video of Execution</b> | 
 |:--:|
-| ![My Solution for Mobile]() |
-
-| <b>Desktop View</b>| 
-|:--:|
-| ![My Solution for Desktop]() |
-
-| <b>More Screenshots</b> | 
-|:--:|
-| [![Link to Google Slides](link-to-slides.png)](https://docs.google.com/presentation/d/e/2PACX-1vROkxVyUGrL-H86BwdRjp2-pR0OU4mqIA1PmLdf0vh8ypV4msyidQBM9mZgJLeFc7AsDSrrOJjhP8Oe/pub?start=false&loop=false&delayms=3000&slide=id.g1270c083a6c_0_146) |
-| [Direct Link to Google Presentation](https://docs.google.com/presentation/d/e/2PACX-1vROkxVyUGrL-H86BwdRjp2-pR0OU4mqIA1PmLdf0vh8ypV4msyidQBM9mZgJLeFc7AsDSrrOJjhP8Oe/pub?start=false&loop=false&delayms=3000&slide=id.g1270c083a6c_0_146)|
+| [![Link to video of execution](link-to-slides.png)](https://screencast-o-matic.com/watch/c3hZckVr5kE) |
+| [Direct Link to Video](https://screencast-o-matic.com/watch/c3hZckVr5kE)|
 
 
 ### Links
