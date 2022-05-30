@@ -5,7 +5,7 @@ Descripton: I am currently studying Python by reading and coding along with [Al 
 ## Table of contents
 
 - [Overview](#overview)
-  - [Screencast](#screencast)
+  - [My Code](#my-code)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
