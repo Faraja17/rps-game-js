@@ -1,79 +1,94 @@
 // variables to keep track of the number of wins, losses, and ties
-var wins = 0;
-var losses = 0;
-var ties = 0;
-var computerMove = "";
-
-// outer main game loop
-while(true) {
-    console.log("" + wins + " Wins " + "" + losses + " Losses " + "" + ties + " Ties ");
+let wins = 0;
+let losses = 0;
+let ties = 0;
+let playerMove = "";
+let computerMove = "";
 
 
-// inner player input loop
-    aLoop:
-    while(true) {
-        var playerMove = prompt("Enter your move: (r)ock (p)aper (s)cissors or (q)uit", "");
-        if(playerMove == "q"){ // quit program if player selects q--haven't figured this out yet.
-            console.log("Thank you for playing!");
-        } else if(playerMove == "r" || playerMove === "p" || playerMove === "s"){
-            break aLoop;// break out of player loop if r, p, or s, is selected, otherwise remind to select one.
-        } else {
-            console.log("Type one of r, p, s, or q.");
-        }
-    }    
+    // outer main game loop
+        alert("Welcome to ROCK PAPER SCISSORS! " + "" + wins + " Wins " + "" + losses + " Losses " + "" + ties + " Ties ");
+        playerMove = prompt("Enter your move: (r)ock (p)aper (s)scissors or (q)uit", "");
 
+function greeting() {
+    // inner player input loop
+        while ((playerMove === "r") || (playerMove === "p") || (playerMove === "s")) {
+                playerChoice(); 
+                computerChoice();
+                gamePlay();
+                alert("" + wins + " Wins " + "" + losses + " Losses " + "" + ties + " Ties ");
+                playerMove = prompt("Enter your move: (r)ock (p)aper (s)scissors or (q)uit.");
+        }    
+        alert("Thank you for playing!");
+}
+
+function playerChoice() {
 // display what the player chose
-    if(playerMove == "r") {
-        console.log("ROCK versus. . .");
-    } else if(playerMove == "p") {
-        console.log("PAPER versus. . .");
-    } else if(playerMove == "s") {
-        console.log("SCISSORS versus. . .");
+    if(playerMove === "r") {
+        alert("ROCK versus. . .");
+    } 
+    else if(playerMove === "p") {
+        alert("PAPER versus. . .");
+    } 
+    else if(playerMove === "s") {
+        alert("SCISSORS versus. . .");
     }
+}
 
+function computerChoice() {
 // display what the computer chose
     let randomNumber = Math.floor(Math.random() * 3);
     if(randomNumber === 0) {
         computerMove = "r";
-        console.log("ROCK");
-    } else if(randomNumber === 1) {
+        alert("ROCK");
+    } 
+    else if(randomNumber === 1) {
         computerMove = "p";
-        console.log("PAPER");
-    } else if(randomNumber === 2) {
+        alert("PAPER");
+    } 
+    else if(randomNumber === 2) {
         computerMove = "s";
-        console.log("SCISSORS");
+        alert("SCISSORS");
     }
+}
 
+function gamePlay() {
 // compare player vs. computer, then display and record the total wins/losses/ties
 
 // tie
-    if(playerMove == computerMove) {
-        console.log("It is a tie!");
+    if(playerMove === computerMove) {
+        alert("It is a tie!");
         ties++;
-    
-
-// win
-    } else if(playerMove == "r" && computerMove == "s") {
-        console.log("You win!");
-        wins++;
-    } else if(playerMove == "p" && computerMove == "r") {
-        console.log("You win!");
-        wins++;
-    } else if(playerMove == "s" && computerMove == "p") {
-        console.log("You win!");
-        wins++;
-
-
-// loss
-    } else if(playerMove == "r" && computerMove == "p") {
-        console.log("You lose!");
-        losses++;
-    } else if(playerMove == "p" && computerMove == "s") {
-        console.log("You lose!");
-        losses++;
-    } else if(playerMove == "s" && computerMove == "r") {
-        console.log("You win!");
-        losses++;
     }
 
+// win
+ 
+    else if(playerMove === "r" && computerMove === "s") {
+        alert("You win!");
+        wins++;
+    } 
+    else if(playerMove === "p" && computerMove === "r") {
+        alert("You win!");
+        wins++;
+    } 
+    else if(playerMove === "s" && computerMove === "p") {
+        alert("You win!");
+        wins++;
+    }
+
+// loss
+    else if(playerMove === "r" && computerMove === "p") {
+        alert("You lose!");
+        losses++;
+    } 
+    else if(playerMove === "p" && computerMove === "s") {
+        alert("You lose!");
+        losses++;
+    } 
+    else if(playerMove === "s" && computerMove === "r") {
+        alert("You lose!");
+        losses++;
+    }
 }
+
+greeting();
