@@ -22,7 +22,7 @@ The biggest challenge of this project was translating a program written in Pytho
 
 ### My Code
 
-```
+```javascript
 // variables to keep track of the number of wins, losses, and ties
 let wins = 0;
 let losses = 0;
