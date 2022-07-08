@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rock Paper Scissors</title>
-    <link rel="icon" href="">
+    <link rel="icon" href="images/scissors.png">
     <link rel="stylesheet" href="css/style.css">
 <!-- font  awesome -->
     <script src="https://kit.fontawesome.com/99a0da3faa.js" crossorigin="anonymous"></script>
   </head>
+
   <body>
-    <h1 class="heading">Welcome to Rock <i class="icon fas fa-thin fa-hand-fist"></i> Paper <i class= "icon fas fa-thin fa-hand"></i> Scissors <i class="icon fas fa-thin fa-hand-scissors"></i> !</h1>
-	<script src="index.js"></script>
+    <!-- player choice -->
+    <h1 class="icons"> <button class="move"><img class="icon" src="images/rock icon.png" alt="hand rock"></button>  <button class="move"><img class="icon" src="images/paper icon.png" alt="hand paper"></button> <button class="move"><img class="icon" src="images/scissors icon.png" alt="hand scissors"></button></h1>
+    <section class="play"><button class="shoot">. . .shoot!</button></section> 
+
+    <!-- animation -->
+    <section class="animation">
+        <section>
+          <img class="moves" src="images/computerRock.png" alt="hand rock"> <img class="moves" src="images/playerRock.png" alt="hand rock">
+        </section>
+        <section>
+          <img class="openHand" src="images/computerOpen.png" alt="open hand"> <img class="openHand" src="images/playerOpen.png" alt="open hand">
+        </section>
+    </section>    
+<script src="index.js"></script>
   </body>
 </html>
