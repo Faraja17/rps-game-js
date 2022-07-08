@@ -5,7 +5,8 @@ Descripton: I am currently studying Python by reading and coding along with [Al 
 ## Table of contents
 
 - [Overview](#overview)
-  - [Screencast](#screencast)
+  - [My Code](#my-code)
+  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -19,12 +20,109 @@ Descripton: I am currently studying Python by reading and coding along with [Al 
 
 The biggest challenge of this project was translating a program written in Python to JavaScript. Through this project, I learned the importance of careful planning, and how to approach breaking the plan into clear and concise steps for readability and clean coding.  This serves as my first original JavaScript project!
 
-### Screencast
+### My Code
 
-| <b>Video of Execution</b> | 
-|:--:|
-| [![Link to video of execution](https://raw.githubusercontent.com/Faraja17/rps-game-js/main/screenshot%20of%20video.png)](https://screencast-o-matic.com/watch/c3hZckVr5kE) |
-| [Direct Link to Video](https://screencast-o-matic.com/watch/c3hZckVr5kE)|
+```javascript
+// variables to keep track of the number of wins, losses, and ties
+let wins = 0;
+let losses = 0;
+let ties = 0;
+let playerMove = "";
+let computerMove = "";
+
+
+    // outer main game loop
+        alert("Welcome to ROCK PAPER SCISSORS! " + "" + wins + " Wins " + "" + losses + " Losses " + "" + ties + " Ties ");
+        playerMove = prompt("Enter your move: (r)ock (p)aper (s)scissors or (q)uit", "");
+
+function greeting() {
+    // inner player input loop
+        while ((playerMove === "r") || (playerMove === "p") || (playerMove === "s")) {
+                playerChoice(); 
+                computerChoice();
+                gamePlay();
+                alert("" + wins + " Wins " + "" + losses + " Losses " + "" + ties + " Ties ");
+                playerMove = prompt("Enter your move: (r)ock (p)aper (s)scissors or (q)uit.");
+        }    
+        alert("Thank you for playing!");
+}
+
+function playerChoice() {
+// display what the player chose
+    if(playerMove === "r") {
+        alert("ROCK versus. . .");
+    } 
+    else if(playerMove === "p") {
+        alert("PAPER versus. . .");
+    } 
+    else if(playerMove === "s") {
+        alert("SCISSORS versus. . .");
+    }
+}
+
+function computerChoice() {
+// display what the computer chose
+    let randomNumber = Math.floor(Math.random() * 3);
+    if(randomNumber === 0) {
+        computerMove = "r";
+        alert("ROCK");
+    } 
+    else if(randomNumber === 1) {
+        computerMove = "p";
+        alert("PAPER");
+    } 
+    else if(randomNumber === 2) {
+        computerMove = "s";
+        alert("SCISSORS");
+    }
+}
+
+function gamePlay() {
+// compare player vs. computer, then display and record the total wins/losses/ties
+
+// tie
+    if(playerMove === computerMove) {
+        alert("It is a tie!");
+        ties++;
+    }
+
+// win
+ 
+    else if(playerMove === "r" && computerMove === "s") {
+        alert("You win!");
+        wins++;
+    } 
+    else if(playerMove === "p" && computerMove === "r") {
+        alert("You win!");
+        wins++;
+    } 
+    else if(playerMove === "s" && computerMove === "p") {
+        alert("You win!");
+        wins++;
+    }
+
+// loss
+    else if(playerMove === "r" && computerMove === "p") {
+        alert("You lose!");
+        losses++;
+    } 
+    else if(playerMove === "p" && computerMove === "s") {
+        alert("You lose!");
+        losses++;
+    } 
+    else if(playerMove === "s" && computerMove === "r") {
+        alert("You lose!");
+        losses++;
+    }
+}
+
+greeting();
+```
+
+### Links
+
+- Live Site URL: [My Rock Paper Scissors Game on CodePen](https://codepen.io/faraja17/pen/xxYWKoq?editors=1112)
+
 
 ## My process
 
@@ -36,16 +134,20 @@ Since spending the last couple of weeks focused on Python, I have become quite r
 
 Finally, I took a video screencast of myself executing the program. In the video, I demonstrate what happens when you enter each of the requested prompts and how the game calculates and stores each round. I also demonstrate what happens if the user enters random characters. I am so pleased with the results, and I look forward to developing this program in JavaScript further, eventually connecting it to HTML and CSS.
 
+5/30/22 As I am solidifying my JS learning, I have been able to fix the serious issues with this program.  Now I'm able to run it in CodePen with no problem!  I also changed all the instances of `var` to `let`, bringing my code up to JS ES6 standards.
+
 
 ### Built with
 
-- JavaScript
+- JavaScript ES6
 
 ### What I learned
 
 What was most interesting when I compared the Python version that I had coded on my own to Sweigart's, was my overall approach.  First, I had coded what would fully happen, from the beginning to the end of the round, if the player selected paper, then I repeated for rock, then scissors, and finally quit.  This approach made my code a bit repetitive.  Sweigart's approach was to combine the player selection, and to code all of the possibilities of one round in parts.  So, in the first part of the round, the player selects r, p, s, or q.  It made sense to code what happens with q first, so that the program doesn't have to iterate further than that line.  The next part of the round involves displaying to the player what they selected, then what the computer selected.  In the final part of the round, the program compares the computer choice to the player choice, and then records and displays the cumulative wins, losses, and ties.  Sweigart's code was much cleaner and efficient than my code.  His code took 70 lines compared to mine, which took 74.  His was also much easier to read and follow. So, I learned an important lesson about thoughtful planning and breaking the code into comprehensible parts.
 
 Overall, I learned through experience, that Python and JavaScript are translatable in some ways.  This project helped me to see, first-hand, how learning one language can help me to become familiar with others.
+
+5/30/22 I also learned that when I first completed this project and wrote the above, I had very little skill in JS. I really was not ready to successfully write the program at that time, but I'm glad that I pushed myself anyway.  Now I can reflect upon how my skills are improving!  I am most happy that my logic skills are getting stronger.  Now I have successfully written to JS programs independently--this one and the my plant tracker!
 
 ### Continued development
 
