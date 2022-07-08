@@ -12,11 +12,11 @@
   </head>
 
   <body>
-    <!-- player choice -->
+    <!-- player choice: player will click the icon of choice and then the . . .shoot button. then JS will calculate the computer's move, start the animation and display the results at the same time. -->
     <h1 class="icons"> <button class="move"><img class="icon" src="images/rock icon.png" alt="hand rock"></button>  <button class="move"><img class="icon" src="images/paper icon.png" alt="hand paper"></button> <button class="move"><img class="icon" src="images/scissors icon.png" alt="hand scissors"></button></h1>
     <section class="play"><button class="shoot">. . .shoot!</button></section> 
 
-    <!-- animation -->
+    <!-- animation: JavaScript will shake the fists and display the player's and computer's moves-->
     <section class="animation">
         <section>
           <img class="moves" src="images/computerRock.png" alt="hand rock"> <img class="moves" src="images/playerRock.png" alt="hand rock">
@@ -25,6 +25,12 @@
           <img class="openHand" src="images/computerOpen.png" alt="open hand"> <img class="openHand" src="images/playerOpen.png" alt="open hand">
         </section>
     </section>    
+
+    <!-- round winner and cumulative score -->
+
+    <section class="tracker">
+      <p class="report"> 🚩 losses, ties, wins 🚩</p> <!--JavaScript will do the calculations. Whe computer wins, the left flag will display. When the player wins, the right will display.-->
+    </section>
 <script src="index.js"></script>
   </body>
 </html>
