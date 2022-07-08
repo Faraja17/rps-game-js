@@ -1,0 +1,16 @@
+body {
+    font-family: 'Open Sans', sans-serif !important;
+    background-color: rgb(121, 177, 178);
+    font-size: 1em;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+}
+
+/* font awesome icons */
+.icon {
+    color: rgb(79, 46, 46);
+    font-size: 4rem;
+}
