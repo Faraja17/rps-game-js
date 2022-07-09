@@ -22,10 +22,10 @@ The biggest challenge of this project was translating a program written in Pytho
 
 ### Screenshots
 
-| <b>Screenshots</b> | 
+| <b>Click the image to view in full screen</b> | 
 |:--:|
-| [![Link to CodePen](https://github.com/Faraja17/rps-game-js/blob/main/Screen%20Shot%202022-07-09%20at%2012.39.39%20AM.png?raw=true)](https://codepen.io/faraja17/full/rNdeZQp) |
-| [Direct Link to CodePen](https://codepen.io/faraja17/full/rNdeZQp)|
+| [![Link to Am I Responsive website](https://github.com/Faraja17/rps-game-js/blob/main/Screen%20Shot%202022-07-09%20at%2012.39.39%20AM.png?raw=true)](https://ui.dev/amiresponsive?url=https://codepen.io/faraja17/full/rNdeZQp) |
+| [Direct Link to AmIResponsive.]([https://codepen.io/faraja17/full/rNdeZQp](https://ui.dev/amiresponsive?url=https://codepen.io/faraja17/full/rNdeZQp))|
 
 ### Links
 
