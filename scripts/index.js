@@ -6,9 +6,18 @@ let playerMove = "";
 let computerMove = "";
 
 
-    // outer main game loop
-        alert("Welcome to ROCK PAPER SCISSORS! " + "" + wins + " Wins " + "" + losses + " Losses " + "" + ties + " Ties ");
-        playerMove = prompt("Enter your move: (r)ock (p)aper (s)scissors or (q)uit", "");
+// game intro detecting button clicks
+// alert("Welcome to ROCK PAPER SCISSORS! " + "" + wins + " Wins " + "" + losses + " Losses " + "" + ties + " Ties ");
+for (let i = 0; i <document.querySelectorAll(".move").length; i++) {
+        
+    document.querySelectorAll(".move")[i].addEventListener('click', function() {
+
+        let buttonInnerHTML = this.innerHTML;
+
+        playerChoice(buttonInnerHTML);
+        computerChoice();
+    });
+}      
 
 function greeting() {
     // inner player input loop
@@ -16,7 +25,6 @@ function greeting() {
                 playerChoice(); 
                 computerChoice();
                 gamePlay();
-                alert("" + wins + " Wins " + "" + losses + " Losses " + "" + ties + " Ties ");
                 playerMove = prompt("Enter your move: (r)ock (p)aper (s)scissors or (q)uit.");
         }    
         alert("Thank you for playing!");
@@ -64,7 +72,7 @@ function gamePlay() {
 // win
  
     else if(playerMove === "r" && computerMove === "s") {
-        alert("You win!");
+        document.querySelector("img").setAttribute("src", "images/")
         wins++;
     } 
     else if(playerMove === "p" && computerMove === "r") {

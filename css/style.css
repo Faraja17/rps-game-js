@@ -4,6 +4,23 @@ body {
     font-size: 1em;
 }
 
+h1 {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 300px) {
+h1 {
+    font-size: 1.5em;
+}
+}
+
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    }
 
 /* play area */
 
@@ -136,3 +153,9 @@ body {
         font-weight: bold;
     }
     }
+
+footer {
+    text-align: center;
+    padding-top: 10%;
+    font-size: small;
+}
