@@ -121,7 +121,9 @@ greeting();
 
 ### Links
 
-- Live Site URL: [My Rock Paper Scissors Game on CodePen](https://codepen.io/faraja17/pen/xxYWKoq?editors=1112)
+- Live Site URL: [DOM Version of Rock Paper Scissors Game on CodePen](https://codepen.io/faraja17/full/rNdeZQp)
+
+- Live Site URL: [The Terminal Version of Rock Paper Scissors Game on CodePen](https://codepen.io/faraja17/pen/xxYWKoq?editors=1112)
 
 
 ## My process
