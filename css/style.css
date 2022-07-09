@@ -139,29 +139,24 @@ h1 {
 }
 
 .report {
-    margin: 0;
+    padding: 2% 0;
     font-size: .8em;
     font-weight: bold;
 }
 
 @media screen and (min-width: 300px) {
 .report {
-    margin: 0;
     font-size: 1.2em;
-    font-weight: bold;
 }
 }
 
 @media screen and (min-width: 600px) {
     .report {
-        margin: 0;
         font-size: 2em;
-        font-weight: bold;
     }
     }
 
 footer {
     text-align: center;
-    padding-top: 10%;
     font-size: small;
 }
