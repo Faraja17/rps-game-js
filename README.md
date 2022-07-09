@@ -5,7 +5,7 @@ Descripton: I am currently studying Python by reading and coding along with [Al 
 ## Table of contents
 
 - [Overview](#overview)
-  - [My Code](#my-code)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -20,104 +20,12 @@ Descripton: I am currently studying Python by reading and coding along with [Al 
 
 The biggest challenge of this project was translating a program written in Python to JavaScript. Through this project, I learned the importance of careful planning, and how to approach breaking the plan into clear and concise steps for readability and clean coding.  This serves as my first original JavaScript project!
 
-### My Code
+### Screenshots
 
-```javascript
-// variables to keep track of the number of wins, losses, and ties
-let wins = 0;
-let losses = 0;
-let ties = 0;
-let playerMove = "";
-let computerMove = "";
-
-
-    // outer main game loop
-        alert("Welcome to ROCK PAPER SCISSORS! " + "" + wins + " Wins " + "" + losses + " Losses " + "" + ties + " Ties ");
-        playerMove = prompt("Enter your move: (r)ock (p)aper (s)scissors or (q)uit", "");
-
-function greeting() {
-    // inner player input loop
-        while ((playerMove === "r") || (playerMove === "p") || (playerMove === "s")) {
-                playerChoice(); 
-                computerChoice();
-                gamePlay();
-                alert("" + wins + " Wins " + "" + losses + " Losses " + "" + ties + " Ties ");
-                playerMove = prompt("Enter your move: (r)ock (p)aper (s)scissors or (q)uit.");
-        }    
-        alert("Thank you for playing!");
-}
-
-function playerChoice() {
-// display what the player chose
-    if(playerMove === "r") {
-        alert("ROCK versus. . .");
-    } 
-    else if(playerMove === "p") {
-        alert("PAPER versus. . .");
-    } 
-    else if(playerMove === "s") {
-        alert("SCISSORS versus. . .");
-    }
-}
-
-function computerChoice() {
-// display what the computer chose
-    let randomNumber = Math.floor(Math.random() * 3);
-    if(randomNumber === 0) {
-        computerMove = "r";
-        alert("ROCK");
-    } 
-    else if(randomNumber === 1) {
-        computerMove = "p";
-        alert("PAPER");
-    } 
-    else if(randomNumber === 2) {
-        computerMove = "s";
-        alert("SCISSORS");
-    }
-}
-
-function gamePlay() {
-// compare player vs. computer, then display and record the total wins/losses/ties
-
-// tie
-    if(playerMove === computerMove) {
-        alert("It is a tie!");
-        ties++;
-    }
-
-// win
- 
-    else if(playerMove === "r" && computerMove === "s") {
-        alert("You win!");
-        wins++;
-    } 
-    else if(playerMove === "p" && computerMove === "r") {
-        alert("You win!");
-        wins++;
-    } 
-    else if(playerMove === "s" && computerMove === "p") {
-        alert("You win!");
-        wins++;
-    }
-
-// loss
-    else if(playerMove === "r" && computerMove === "p") {
-        alert("You lose!");
-        losses++;
-    } 
-    else if(playerMove === "p" && computerMove === "s") {
-        alert("You lose!");
-        losses++;
-    } 
-    else if(playerMove === "s" && computerMove === "r") {
-        alert("You lose!");
-        losses++;
-    }
-}
-
-greeting();
-```
+| <b>Screenshots</b> | 
+|:--:|
+| [![Link to CodePen](https://github.com/Faraja17/rps-game-js/blob/main/Screen%20Shot%202022-07-09%20at%2012.39.39%20AM.png?raw=true)](https://codepen.io/faraja17/full/rNdeZQp) |
+| [Direct Link to CodePen](https://codepen.io/faraja17/full/rNdeZQp)|
 
 ### Links
 
