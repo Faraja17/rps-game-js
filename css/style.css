@@ -1,14 +1,9 @@
 body {
-    font-family: 'Open Sans', sans-serif !important;
+    font-family: 'Open Sans', sans-serif;
     background-color: rgb(121, 177, 178);
     font-size: 1em;
 }
 
-h1 {
-    text-align: center;
-    font-size: 1em;
-    font-weight: bold;
-}
 
 hr {
     height: 1px;
@@ -16,121 +11,129 @@ hr {
     border: none;
 }
 
-@media screen and (min-width: 300px) {
 h1 {
     font-size: 1.5em;
-}
+    padding: 5% 0;
+    text-align: center;
+    font-weight: bold;
 }
 
-@media screen and (min-width: 600px) {
-    h1 {
-        font-size: 2em;
-    }
-    }
+@media screen and (min-width: 500px) {
+h1 {
+    font-size: 2em;
+    padding: 0;
+}
+}
 
 /* play area */
+.icons { /* the container */
+    text-align: center;
+    margin: 0;
+    padding: 0 0 15% 0;
+}
 
-/* play piece buttons */
+@media screen and (min-width: 500px) {
+.icons {
+    text-align: center;
+    margin: 0;
+    padding: 0 0 3% 0;
+}
+}
 
-.move {
+@media screen and (min-width: 1200px) {
+.icons {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+}
+
+.move { /* the buttons */
     background-color: rgb(121, 177, 178);
     border: none;
-    width: 16%;
-    padding: 0
+    width: 20%;
+    padding: 0;
+    color: rgb(121, 177, 178);
 }
+
 .move:hover {
     background-color: rgb(195, 238, 239);
+    color: rgb(195, 238, 239);
 }
 
 .move:active {
     background-color: rgb(76, 142, 144);
+    color: rgb(76, 142, 144);
 }
 
-.icons {
-    text-align: center;
-    margin: 0;
-}
-
-.icon {
+.icon { /* image within the button */
     width: 60%;
 }
 
-@media screen and (min-width: 300px) {
-    .icon {
-        width: 40%;
-    }
-    }
+@media screen and (min-width: 500px) {
+.icon {
+    width: 40%;
+}
+}
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1200px) {
 .icon {
     width: 20%;
 }
 }
 
-
-.play {
-    text-align: center;
-    padding: 0;
-}
-
-/* play button */
-.shoot {
-    font-weight: bold;
-    font-size: .8em;
-    margin: 0 auto;
-    background-color: rgb(76, 142, 144);
-    border: none;
-    width: 250%;
-}
-
-@media screen and (min-width: 300px) {
-.shoot {
-    font-weight: bold;
-    font-size: 1.2em;
-    margin: 0 auto;
-    background-color: rgb(76, 142, 144);
-    border-color: rgb(0,0,0);
-    width: 50%;
-}
-}
-
-@media screen and (min-width: 600px) {
-.shoot {
-    font-weight: bold;
-    font-size: 2em;
-    margin: 0 auto;
-    background-color: rgb(76, 142, 144);
-    border-color: rgb(0,0,0);
-    width: 50%;
-}
-}
-
-.shoot:hover {
-    background-color: rgb(195, 238, 239);
-}
-
-.shoot:active {
-    background-color: rgb(121, 177, 178);
-}
-
 /* animation */
-.animation {
+.animation { /* container */
     text-align: center;
-    margin-top: 10%;
+    padding: 20% 0 10%;
+    width: 100%;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
 .animation {
     text-align: center;
-    margin-top: 4%;
+    padding: 8% 0 0;
+    width: 100%;
 }
 }
+
+@media screen and (min-width: 1200px) {
+    .animation {
+        text-align: center;
+        padding: 4% 0 0;
+        width: 100%;
+    }
+    }
+
+.moves { /* game piece images */
+    width: 30%;
+}
+
+@media screen and (min-width: 500px) {
+.moves {
+    width: 25%;
+}
+}
+
+@media screen and (min-width: 1200px) {
 .moves {
     width: 15%;
 }
+}
 
+.openHand { /* bottom image */
+    width: 45%;
+}
+
+@media screen and (min-width: 500px) {
+.openHand {
+    width: 40%;
+}
+}
+@media screen and (min-width: 1200px) {
 .openHand {
     width: 25%;
+}
 }
 
 /* round winner and cumulative score */
@@ -139,24 +142,35 @@ h1 {
 }
 
 .report {
-    padding: 2% 0;
-    font-size: .8em;
+    padding: 20% 0;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 500px) {
 .report {
     font-size: 1.2em;
+    padding: 0;
 }
 }
 
-@media screen and (min-width: 600px) {
-    .report {
-        font-size: 2em;
-    }
-    }
+@media screen and (min-width: 1200px) {
+.report {
+    font-size: 2em;
+    padding: 1%;
+}
+}
 
 footer {
     text-align: center;
     font-size: small;
+    padding: 5%;
+}
+
+@media screen and (min-width: 1200px) {
+footer {
+    text-align: center;
+    font-size: small;
+    padding: 0;
+}
 }

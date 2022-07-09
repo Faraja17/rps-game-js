@@ -19,44 +19,47 @@ for (let i = 0; i <document.querySelectorAll(".move").length; i++) {
     });
 }      
 
-function greeting() {
-    // inner player input loop
-        while ((playerMove === "r") || (playerMove === "p") || (playerMove === "s")) {
-                playerChoice(); 
-                computerChoice();
-                gamePlay();
-                playerMove = prompt("Enter your move: (r)ock (p)aper (s)scissors or (q)uit.");
-        }    
-        alert("Thank you for playing!");
-}
+// function greeting() {
+//     // inner player input loop
+//         while ((playerMove === "r") || (playerMove === "p") || (playerMove === "s")) {
+//                 playerChoice(); 
+//                 computerChoice();
+//                 gamePlay();
+//                 playerMove = prompt("Enter your move: (r)ock (p)aper (s)scissors or (q)uit.");
+//         }    
+// }
 
-function playerChoice() {
+function playerChoice(key) {
 // display what the player chose
-    if(playerMove === "r") {
-        alert("ROCK versus. . .");
-    } 
-    else if(playerMove === "p") {
-        alert("PAPER versus. . .");
-    } 
-    else if(playerMove === "s") {
-        alert("SCISSORS versus. . .");
+   switch (key) {
+    case "r":
+        document.querySelector(".playerMove").setAttribute("src", "images/playerRock.png");
+        break;
+
+    case "p":
+        document.querySelector(".playerMove").setAttribute("src", "images/playerPaper.png");
+        break;
+
+    case "s":
+        document.querySelector(".playerMove").setAttribute("src", "images/playerScissors.png");
+        break;
     }
 }
 
-function computerChoice() {
+function computerChoice(computerMove) {
 // display what the computer chose
     let randomNumber = Math.floor(Math.random() * 3);
     if(randomNumber === 0) {
         computerMove = "r";
-        alert("ROCK");
+        document.querySelector(".compMove").setAttribute("src", "images/computerRock.png");
     } 
     else if(randomNumber === 1) {
         computerMove = "p";
-        alert("PAPER");
+        document.querySelector(".compMove").setAttribute("src", "images/computerPaper.png");
     } 
     else if(randomNumber === 2) {
         computerMove = "s";
-        alert("SCISSORS");
+        document.querySelector(".compMove").setAttribute("src", "images/computerScissors.png");
     }
 }
 
