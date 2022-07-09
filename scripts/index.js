@@ -2,7 +2,7 @@
 let wins = 0;
 let losses = 0;
 let ties = 0;
-let playerMove = "";
+let buttonInnerHTML = "";
 let computerMove = "";
 
 
@@ -13,6 +13,8 @@ for (let i = 0; i <document.querySelectorAll(".move").length; i++) {
     document.querySelectorAll(".move")[i].addEventListener('click', function() {
 
         let buttonInnerHTML = this.innerHTML;
+        
+        console.log(buttonInnerHTML);
 
         playerChoice(buttonInnerHTML);
         computerChoice();
@@ -46,7 +48,7 @@ function playerChoice(key) {
     }
 }
 
-function computerChoice(computerMove) {
+function computerChoice() {
 // display what the computer chose
     let randomNumber = Math.floor(Math.random() * 3);
     if(randomNumber === 0) {
@@ -67,14 +69,14 @@ function gamePlay() {
 // compare player vs. computer, then display and record the total wins/losses/ties
 
 // tie
-    if(playerMove === computerMove) {
+    if(buttonInnerHTML === computerMove) {
         alert("It is a tie!");
         ties++;
     }
 
 // win
  
-    else if(playerMove === "r" && computerMove === "s") {
+    else if(buttonInnerHTML === "r" && computerMove === "s") {
         document.querySelector("img").setAttribute("src", "images/")
         wins++;
     } 
@@ -102,4 +104,4 @@ function gamePlay() {
     }
 }
 
-greeting();
+// greeting();
