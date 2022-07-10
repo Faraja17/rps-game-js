@@ -18,11 +18,7 @@ for (let i = 0; i <document.querySelectorAll(".move").length; i++) {
             playerChoice(buttonInnerHTML);
             computerChoice();
             gamePlay(buttonInnerHTML, computerMove);
-        }, 1250); /* milliseconds, so .01 seconds*/
-        
-        
-        console.log(`player ${buttonInnerHTML}, computer ${computerMove}`);
-        console.log(`Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`);
+        }, 1600); /* milliseconds, so .16 seconds*/
     });
 }      
 
@@ -32,12 +28,12 @@ document.addEventListener("keydown", function(event) {
 
     //change back to rock
 
-    playerChoice(event.key);
-    computerChoice();
-    gamePlay(event.key, computerMove);
-
-    console.log(`player ${event.key}, computer ${computerMove}`);
-    console.log(`Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`);
+    shake();
+    setTimeout(function() {
+      playerChoice(event.key);
+      computerChoice();
+      gamePlay(event.key, computerMove);
+    }, 1600); /* milliseconds, so .16 seconds*/
 });
 
 
@@ -130,31 +126,31 @@ const shake = () => {
     setTimeout(function() {
         compFist.classList.remove("up");
         container.classList.remove("containerUp");
-    }, 250); /* milliseconds, so .01 seconds*/
+    }, 250); /* milliseconds, so .025 seconds*/
 
     //move down
     setTimeout(function() {
         compFist.classList.add("up");
         container.classList.add("containerUp");
-    }, 500); /* milliseconds, so .01 seconds*/
+    }, 500); /* milliseconds, so .05 seconds*/
 
     //move down
     setTimeout(function() {
         compFist.classList.remove("up");
         container.classList.remove("containerUp");
-    }, 750); /* milliseconds, so .01 seconds*/
+    }, 750); /* milliseconds, so .075 seconds*/
 
     //move down
     setTimeout(function() {
         compFist.classList.add("up");
         container.classList.add("containerUp");
-    }, 1000); /* milliseconds, so .01 seconds*/
+    }, 1000); /* milliseconds, so .1 seconds*/
 
     //move down
     setTimeout(function() {
         compFist.classList.remove("up");
         container.classList.remove("containerUp");
-    }, 1250); /* milliseconds, so .01 seconds*/
+    }, 1250); /* milliseconds, so .125 seconds*/
 
     let playerFist = document.querySelector(".playerMove");
 
@@ -165,29 +161,29 @@ const shake = () => {
     setTimeout(function() {
         playerFist.classList.remove("up");
         container.classList.remove("containerUp");        
-    }, 250); /* milliseconds, so .01 seconds*/
+    }, 250); /* milliseconds, so .025 seconds*/
 
     //move down
     setTimeout(function() {
         playerFist.classList.add("up");
         container.classList.add("containerUp");
-    }, 500); /* milliseconds, so .01 seconds*/
+    }, 500); /* milliseconds, so .05 seconds*/
 
     //move down
     setTimeout(function() {
         playerFist.classList.remove("up");
         container.classList.remove("containerUp");   
-    }, 750); /* milliseconds, so .01 seconds*/
+    }, 750); /* milliseconds, so .075 seconds*/
 
     //move down
     setTimeout(function() {
         playerFist.classList.add("up");
         container.classList.add("containerUp");
-    }, 1000); /* milliseconds, so .01 seconds*/
+    }, 1000); /* milliseconds, so .1 seconds*/
 
     //move down
     setTimeout(function() {
         playerFist.classList.remove("up");
         container.classList.remove("containerUp");   
-    }, 1250); /* milliseconds, so .01 seconds*/
+    }, 1250); /* milliseconds, so .125 seconds*/
 }
