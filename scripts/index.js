@@ -2,7 +2,7 @@
 let wins = 0;
 let losses = 0;
 let ties = 0;
-let buttonInnerHTML = "";
+let key = "";
 let computerMove = "";
 
 
@@ -22,6 +22,18 @@ for (let i = 0; i <document.querySelectorAll(".move").length; i++) {
         console.log(`Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`);
     });
 }      
+
+// detecting keyboard presses
+
+document.addEventListener("keydown", function(event) {
+    playerChoice(event.key);
+    computerChoice();
+    gamePlay(event.key, computerMove);
+
+    console.log(`player ${event.key}, computer ${computerMove}`);
+    console.log(`Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`);
+});
+
 
 function playerChoice(key) {
 // display what the player chose
@@ -57,40 +69,40 @@ function computerChoice() {
     }
 }
 
-function gamePlay(buttonInnerHTML, computerMove) {
+function gamePlay(key, computerMove) {
 // compare player vs. computer, then display and record the total wins/losses/ties
 
 // tie
-    if(buttonInnerHTML == computerMove) {
+    if(key == computerMove) {
         ties++;
         document.querySelector(".report").innerHTML = `Losses: ${losses}, 🚩Ties: ${ties}, Wins: ${wins}`;  
     }
 
 // win
  
-    else if(buttonInnerHTML === "r" && computerMove === "s") {
+    else if(key === "r" && computerMove === "s") {
         wins++;
         document.querySelector(".report").innerHTML = `Losses: ${losses}, Ties: ${ties}, Wins: ${wins} 🚩`;   
     } 
-    else if(buttonInnerHTML === "p" && computerMove === "r") {
+    else if(key === "p" && computerMove === "r") {
         wins++;
         document.querySelector(".report").innerHTML = `Losses: ${losses}, Ties: ${ties}, Wins: ${wins} 🚩`;
     } 
-    else if(buttonInnerHTML === "s" && computerMove === "p") {
+    else if(key === "s" && computerMove === "p") {
         wins++;
         document.querySelector(".report").innerHTML = `Losses: ${losses}, Ties: ${ties}, Wins: ${wins} 🚩`;
     }
 
 // loss
-    else if(buttonInnerHTML === "r" && computerMove === "p") {
+    else if(key === "r" && computerMove === "p") {
         losses++;
         document.querySelector(".report").innerHTML = `🚩 Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`;
     } 
-    else if(buttonInnerHTML === "p" && computerMove === "s") {
+    else if(key === "p" && computerMove === "s") {
         losses++;
         document.querySelector(".report").innerHTML = `🚩 Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`;
     } 
-    else if(buttonInnerHTML === "s" && computerMove === "r") {
+    else if(key === "s" && computerMove === "r") {
         losses++;
         document.querySelector(".report").innerHTML = `🚩 Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`;
     }
