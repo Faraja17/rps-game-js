@@ -1,4 +1,4 @@
-// variables to keep track of the number of wins, losses, and ties
+// variables to keep track of moves and the number of wins, losses, ties
 let wins = 0;
 let losses = 0;
 let ties = 0;
@@ -7,29 +7,21 @@ let computerMove = "";
 
 
 // game intro detecting button clicks
-// alert("Welcome to ROCK PAPER SCISSORS! " + "" + wins + " Wins " + "" + losses + " Losses " + "" + ties + " Ties ");
+
 for (let i = 0; i <document.querySelectorAll(".move").length; i++) {
         
     document.querySelectorAll(".move")[i].addEventListener('click', function() {
 
         let buttonInnerHTML = this.innerHTML;
-        
-        console.log(buttonInnerHTML);
 
         playerChoice(buttonInnerHTML);
         computerChoice();
+        gamePlay(buttonInnerHTML, computerMove);
+        
+        console.log(`player ${buttonInnerHTML}, computer ${computerMove}`);
+        console.log(`Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`);
     });
 }      
-
-// function greeting() {
-//     // inner player input loop
-//         while ((playerMove === "r") || (playerMove === "p") || (playerMove === "s")) {
-//                 playerChoice(); 
-//                 computerChoice();
-//                 gamePlay();
-//                 playerMove = prompt("Enter your move: (r)ock (p)aper (s)scissors or (q)uit.");
-//         }    
-// }
 
 function playerChoice(key) {
 // display what the player chose
@@ -65,43 +57,41 @@ function computerChoice() {
     }
 }
 
-function gamePlay() {
+function gamePlay(buttonInnerHTML, computerMove) {
 // compare player vs. computer, then display and record the total wins/losses/ties
 
 // tie
-    if(buttonInnerHTML === computerMove) {
-        alert("It is a tie!");
+    if(buttonInnerHTML == computerMove) {
         ties++;
+        document.querySelector(".report").innerHTML = `Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`;  
     }
 
 // win
  
     else if(buttonInnerHTML === "r" && computerMove === "s") {
-        document.querySelector("img").setAttribute("src", "images/")
         wins++;
+        document.querySelector(".report").innerHTML = `Losses: ${losses}, Ties: ${ties}, Wins: ${wins} 🚩`;   
     } 
-    else if(playerMove === "p" && computerMove === "r") {
-        alert("You win!");
+    else if(buttonInnerHTML === "p" && computerMove === "r") {
         wins++;
+        document.querySelector(".report").innerHTML = `Losses: ${losses}, Ties: ${ties}, Wins: ${wins} 🚩`;
     } 
-    else if(playerMove === "s" && computerMove === "p") {
-        alert("You win!");
+    else if(buttonInnerHTML === "s" && computerMove === "p") {
         wins++;
+        document.querySelector(".report").innerHTML = `Losses: ${losses}, Ties: ${ties}, Wins: ${wins} 🚩`;
     }
 
 // loss
-    else if(playerMove === "r" && computerMove === "p") {
-        alert("You lose!");
+    else if(buttonInnerHTML === "r" && computerMove === "p") {
         losses++;
+        document.querySelector(".report").innerHTML = `🚩 Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`;
     } 
-    else if(playerMove === "p" && computerMove === "s") {
-        alert("You lose!");
+    else if(buttonInnerHTML === "p" && computerMove === "s") {
         losses++;
+        document.querySelector(".report").innerHTML = `🚩 Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`;
     } 
-    else if(playerMove === "s" && computerMove === "r") {
-        alert("You lose!");
+    else if(buttonInnerHTML === "s" && computerMove === "r") {
         losses++;
+        document.querySelector(".report").innerHTML = `🚩 Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`;
     }
 }
-
-// greeting();
