@@ -24,12 +24,12 @@ The biggest challenge of this project was translating a program written in Pytho
 
 | <b>Click the image to view in full screen</b> | 
 |:--:|
-| [![Link to Am I Responsive website](https://github.com/Faraja17/rps-game-js/blob/main/Screen%20Shot%202022-07-09%20at%2012.58.05%20AM.png?raw=true)](https://github.com/Faraja17/rps-game-js/blob/main/Screen%20Shot%202022-07-09%20at%2012.58.05%20AM.png?raw=true) |
+| [![Link to Am I Responsive website](https://raw.githubusercontent.com/Faraja17/rps-game-js/main/Screen%20Shot%202022-07-09%20at%208.29.31%20PM.png)](https://raw.githubusercontent.com/Faraja17/rps-game-js/main/Screen%20Shot%202022-07-09%20at%208.29.31%20PM.png) |
 | [Direct Link to Am I Responsive website](https://ui.dev/amiresponsive?url=https://codepen.io/faraja17/full/rNdeZQp)|
 
 ### Links
 
-- Live Site URL: [DOM Version of Rock Paper Scissors Game on CodePen](https://codepen.io/faraja17/full/rNdeZQp)
+- Live Site URL: [GUI Version of Rock Paper Scissors Game on CodePen](https://codepen.io/faraja17/full/rNdeZQp)
 
 - Live Site URL: [The Terminal Version of Rock Paper Scissors Game on CodePen](https://codepen.io/faraja17/pen/xxYWKoq?editors=1112)
 
