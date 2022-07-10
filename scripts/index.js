@@ -63,7 +63,7 @@ function gamePlay(buttonInnerHTML, computerMove) {
 // tie
     if(buttonInnerHTML == computerMove) {
         ties++;
-        document.querySelector(".report").innerHTML = `Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`;  
+        document.querySelector(".report").innerHTML = `Losses: ${losses}, 🚩Ties: ${ties}, Wins: ${wins}`;  
     }
 
 // win
