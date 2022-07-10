@@ -35,7 +35,7 @@ document.addEventListener("keydown", function(event) {
 });
 
 
-function playerChoice(key) {
+const playerChoice = (key) => {
 // display what the player chose
    switch (key) {
     case "r":
@@ -52,7 +52,7 @@ function playerChoice(key) {
     }
 }
 
-function computerChoice() {
+const computerChoice = () => {
 // display what the computer chose
     let randomNumber = Math.floor(Math.random() * 3);
     if(randomNumber === 0) {
@@ -69,7 +69,7 @@ function computerChoice() {
     }
 }
 
-function gamePlay(key, computerMove) {
+const gamePlay = (key, computerMove) => {
 // compare player vs. computer, then display and record the total wins/losses/ties
 
 // tie
@@ -107,3 +107,16 @@ function gamePlay(key, computerMove) {
         document.querySelector(".report").innerHTML = `🚩 Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`;
     }
 }
+
+// const shake = () => {
+//     //change back to rock
+//     document.querySelector(".compMove").setAttribute("src", "images/computerRock.png");
+//     document.querySelector(".playerMove").setAttribute("src", "images/playerRock.png");
+//     //move up
+//     document.querySelectorAll(".moves").setAttribute("style","padding-bottom: 2%");
+//     //move down
+//     document.querySelectorAll(".moves").setAttribute("style","padding-bottom: 0%");
+
+
+
+// }

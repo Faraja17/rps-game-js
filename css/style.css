@@ -59,7 +59,7 @@ h1 {
     border: none;
     width: 30%;
     padding: 0 10px;
-    color: rgb(222, 247, 247);
+    color: transparent;
     line-height: 3em;
 }
 
@@ -83,12 +83,12 @@ h1 {
 
 .move:hover {
     background-color: rgb(195, 238, 239);
-    color: rgb(195, 238, 239);
+    color: transparent;
 }
 
 .move:active {
     background-color: rgb(172, 220, 221);
-    color: rgb(172, 220, 221);
+    color: transparent;
 }
 
 /* The button backgound image settings */
