@@ -117,7 +117,7 @@ const shake = () => {
     
     //move up
     let compFist = document.querySelector(".compMove");
-    let container = document.querySelector(".animation")
+    let container = document.querySelector(".animation");
 
     compFist.classList.add("up");
     container.classList.add("containerUp");
