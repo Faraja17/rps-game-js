@@ -5,7 +5,6 @@ let ties = 0;
 let key = "";
 let computerMove = "";
 
-
 // game intro detecting button clicks
 
 for (let i = 0; i <document.querySelectorAll(".move").length; i++) {
@@ -14,9 +13,13 @@ for (let i = 0; i <document.querySelectorAll(".move").length; i++) {
 
         let buttonInnerHTML = this.innerHTML;
 
-        playerChoice(buttonInnerHTML);
-        computerChoice();
-        gamePlay(buttonInnerHTML, computerMove);
+        shake();
+        setTimeout(function() {
+            playerChoice(buttonInnerHTML);
+            computerChoice();
+            gamePlay(buttonInnerHTML, computerMove);
+        }, 1250); /* milliseconds, so .01 seconds*/
+        
         
         console.log(`player ${buttonInnerHTML}, computer ${computerMove}`);
         console.log(`Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`);
@@ -26,6 +29,9 @@ for (let i = 0; i <document.querySelectorAll(".move").length; i++) {
 // detecting keyboard presses
 
 document.addEventListener("keydown", function(event) {
+
+    //change back to rock
+
     playerChoice(event.key);
     computerChoice();
     gamePlay(event.key, computerMove);
@@ -108,15 +114,80 @@ const gamePlay = (key, computerMove) => {
     }
 }
 
-// const shake = () => {
-//     //change back to rock
-//     document.querySelector(".compMove").setAttribute("src", "images/computerRock.png");
-//     document.querySelector(".playerMove").setAttribute("src", "images/playerRock.png");
-//     //move up
-//     document.querySelectorAll(".moves").setAttribute("style","padding-bottom: 2%");
-//     //move down
-//     document.querySelectorAll(".moves").setAttribute("style","padding-bottom: 0%");
+const shake = () => {
+    //change back to rock
+        document.querySelector(".compMove").setAttribute("src", "images/computerRock.png");
+        document.querySelector(".playerMove").setAttribute("src", "images/playerRock.png");
+    
+    //move up
+    let compFist = document.querySelector(".compMove");
+    let container = document.querySelector(".animation")
 
+    compFist.classList.add("up");
+    container.classList.add("containerUp");
+    
+    //move down
+    setTimeout(function() {
+        compFist.classList.remove("up");
+        container.classList.remove("containerUp");
+    }, 250); /* milliseconds, so .01 seconds*/
 
+    //move down
+    setTimeout(function() {
+        compFist.classList.add("up");
+        container.classList.add("containerUp");
+    }, 500); /* milliseconds, so .01 seconds*/
 
-// }
+    //move down
+    setTimeout(function() {
+        compFist.classList.remove("up");
+        container.classList.remove("containerUp");
+    }, 750); /* milliseconds, so .01 seconds*/
+
+    //move down
+    setTimeout(function() {
+        compFist.classList.add("up");
+        container.classList.add("containerUp");
+    }, 1000); /* milliseconds, so .01 seconds*/
+
+    //move down
+    setTimeout(function() {
+        compFist.classList.remove("up");
+        container.classList.remove("containerUp");
+    }, 1250); /* milliseconds, so .01 seconds*/
+
+    let playerFist = document.querySelector(".playerMove");
+
+    playerFist.classList.add("up");
+    container.classList.add("containerUp");
+    
+    //move down
+    setTimeout(function() {
+        playerFist.classList.remove("up");
+        container.classList.remove("containerUp");        
+    }, 250); /* milliseconds, so .01 seconds*/
+
+    //move down
+    setTimeout(function() {
+        playerFist.classList.add("up");
+        container.classList.add("containerUp");
+    }, 500); /* milliseconds, so .01 seconds*/
+
+    //move down
+    setTimeout(function() {
+        playerFist.classList.remove("up");
+        container.classList.remove("containerUp");   
+    }, 750); /* milliseconds, so .01 seconds*/
+
+    //move down
+    setTimeout(function() {
+        playerFist.classList.add("up");
+        container.classList.add("containerUp");
+    }, 1000); /* milliseconds, so .01 seconds*/
+
+    //move down
+    setTimeout(function() {
+        playerFist.classList.remove("up");
+        container.classList.remove("containerUp");   
+    }, 1250); /* milliseconds, so .01 seconds*/
+}

@@ -179,6 +179,38 @@ h1 {
 }
 }
 
+.up {
+    padding: 0 0 20%;
+} 
+
+@media screen and (min-width: 500px) {
+.up {
+    padding: 0 0 8%;
+}
+} 
+
+@media screen and (min-width: 1200px) {
+.up {
+    padding: 0 0 4%;
+} 
+}
+
+.containerUp {
+    padding: 0 0 10%;
+}
+
+@media screen and (min-width: 500px) {
+.containerUp {
+    padding: 0;
+}
+}
+
+@media screen and (min-width: 1200px) {
+.containerUp {
+    padding: 0;
+}
+}
+
 .openHand { /* bottom image */
     width: 40%;
 }
