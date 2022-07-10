@@ -2,6 +2,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: rgb;
     font-size: 1em;
+    color:rgb(18, 98, 100);
 }
 
 
@@ -23,6 +24,11 @@ h1 {
     font-size: 2em;
     padding: 0;
 }
+}
+
+/* key presses in h1 */
+.rps {
+    background-color: rgb(222, 247, 247);
 }
 
 /* play area */
@@ -195,7 +201,7 @@ h1 {
 
 .report {
     padding: 20% 0;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
