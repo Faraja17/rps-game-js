@@ -25,7 +25,7 @@ The biggest challenge of this project was translating a program written in Pytho
 | <b>Click the image to view in full screen</b> | 
 |:--:|
 | [![Link to full-screen view](https://raw.githubusercontent.com/Faraja17/rps-game-js/main/Screen%20Shot%202022-07-10%20at%2012.50.31%20AM.png)](https://raw.githubusercontent.com/Faraja17/rps-game-js/main/Screen%20Shot%202022-07-10%20at%2012.50.31%20AM.png) |
-| [Direct Link to Am I Responsive website](https://ui.dev/amiresponsive?url=https://codepen.io/faraja17/full/rNdeZQp)|
+| [Direct Link to Am I Responsive Website](https://ui.dev/amiresponsive?url=https://faraja17.github.io/rps-game-js/)
 
 ### Links
 
