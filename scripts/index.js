@@ -77,36 +77,36 @@ const gamePlay = (key, computerMove) => {
 // tie
     if(key == computerMove) {
         ties++;
-        document.querySelector(".report").innerHTML = `Losses: ${losses}, 🚩Ties: ${ties}, Wins: ${wins}`;  
+        document.querySelector(".report").innerHTML = `Losses: ${losses}, 🚩Ties: ${ties}🚩, Wins: ${wins}`;  
     }
 
 // win
  
     else if(key === "r" && computerMove === "s") {
         wins++;
-        document.querySelector(".report").innerHTML = `Losses: ${losses}, Ties: ${ties}, Wins: ${wins} 🚩`;   
+        document.querySelector(".report").innerHTML = `Losses: ${losses}, Ties: ${ties}, 🚩Wins: ${wins}🚩`;   
     } 
     else if(key === "p" && computerMove === "r") {
         wins++;
-        document.querySelector(".report").innerHTML = `Losses: ${losses}, Ties: ${ties}, Wins: ${wins} 🚩`;
+        document.querySelector(".report").innerHTML = `Losses: ${losses}, Ties: ${ties}, 🚩Wins: ${wins}🚩`;
     } 
     else if(key === "s" && computerMove === "p") {
         wins++;
-        document.querySelector(".report").innerHTML = `Losses: ${losses}, Ties: ${ties}, Wins: ${wins} 🚩`;
+        document.querySelector(".report").innerHTML = `Losses: ${losses}, Ties: ${ties}, 🚩Wins: ${wins}🚩`;
     }
 
 // loss
     else if(key === "r" && computerMove === "p") {
         losses++;
-        document.querySelector(".report").innerHTML = `🚩 Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`;
+        document.querySelector(".report").innerHTML = `🚩Losses: ${losses}🚩, Ties: ${ties}, Wins: ${wins}`;
     } 
     else if(key === "p" && computerMove === "s") {
         losses++;
-        document.querySelector(".report").innerHTML = `🚩 Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`;
+        document.querySelector(".report").innerHTML = `🚩Losses: ${losses}🚩, Ties: ${ties}, Wins: ${wins}`;
     } 
     else if(key === "s" && computerMove === "r") {
         losses++;
-        document.querySelector(".report").innerHTML = `🚩 Losses: ${losses}, Ties: ${ties}, Wins: ${wins}`;
+        document.querySelector(".report").innerHTML = `🚩Losses: ${losses}🚩, Ties: ${ties}, Wins: ${wins}`;
     }
 }
 
