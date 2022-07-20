@@ -1,6 +1,6 @@
 # Rock, Paper, Scissors Game in JavaScript
 
-Descripton: I am currently studying Python by reading and coding along with [Al Sweigart's book *Automate the Boring Stuff*](https://automatetheboringstuff.com/).  At the end of Chapter 2, I learned how to code a Rock, Paper, Scissors game.  Here, I use what I learned in the lesson to code a similar game in JavaScript.
+Descripton: I am currently studying Python by reading and coding along with [Al Sweigart's book *Automate the Boring Stuff*](https://automatetheboringstuff.com/).  At the end of Chapter 2, I learned how to code a Rock, Paper, Scissors game.  Here, I use what I learned in the lesson to code a similar game in JavaScript. 7/20/22 I have updated the game from the original JavaScript text-based flow to a GUI interface with HTML, CSS, and image files!
 
 ## Table of contents
 
@@ -46,9 +46,13 @@ Finally, I took a video screencast of myself executing the program. In the video
 
 5/30/22 As I am solidifying my JS learning, I have been able to fix the serious issues with this program.  Now I'm able to run it in CodePen with no problem!  I also changed all the instances of `var` to `let`, bringing my code up to JS ES6 standards.
 
+7/20/22 Two weeks ago, I set out on the ambitious task of refactoring my code and connecting to HTML, CSS, and image files in order to manipulate the DOM! I am very happy to report great success! Please check out [my commits](https://github.com/Faraja17/rps-game-js/commits/main) for details. Also, I did a five-minute presentation at Virtual Recurse Center about my learning process. Here is [a link to my slides](https://docs.google.com/presentation/d/e/2PACX-1vSt7zl2zYvNFjtJsQfojegl0CkxFQfeChr4yNCUY8v8NlQvRZd_ljNDeVGWDkbg3DXvirMxPCohcl7N/pub?start=false&loop=false&delayms=60000&slide=id.p). Last week, I [customized the game](https://github.com/Faraja17/customized-js-rps-game) for my little cousins.
+
 
 ### Built with
 
+- Semantic HTML5 markup
+- CSS 3 properties
 - JavaScript ES6
 
 ### What I learned
@@ -58,6 +62,13 @@ What was most interesting when I compared the Python version that I had coded on
 Overall, I learned through experience, that Python and JavaScript are translatable in some ways.  This project helped me to see, first-hand, how learning one language can help me to become familiar with others.
 
 5/30/22 I also learned that when I first completed this project and wrote the above, I had very little skill in JS. I really was not ready to successfully write the program at that time, but I'm glad that I pushed myself anyway.  Now I can reflect upon how my skills are improving!  I am most happy that my logic skills are getting stronger.  Now I have successfully written to JS programs independently--this one and the my plant tracker!
+
+7/20/22
+- JS ES6 practices
+- How to restore specific areas of removed background on remove.bg
+- Review and application of query selectors, event listeners, switch(), setTimeout()
+- Classlist() to manipulate CSS
+- Creative/extended use of setTimeout() to time the fist shakes and delay gamePlay()
 
 ### Continued development
 
