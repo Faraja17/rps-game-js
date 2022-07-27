@@ -110,80 +110,39 @@ const gamePlay = (key, computerMove) => {
     }
 }
 
-const shake = () => {
-    //change back to rock
-        document.querySelector(".compMove").setAttribute("src", "images/computerRock.png");
-        document.querySelector(".playerMove").setAttribute("src", "images/playerRock.png");
-    
+const moveUp = (compFist, playerFist, container, timerUp) => {
     //move up
+    setTimeout(function() {
+        compFist.classList.add("up");
+        playerFist.classList.add("up");
+        container.classList.add("containerUp");
+    }, timerUp);
+}
+
+const moveDown = (compFist, playerFist, container, timerDown) => {
+    //move down
+    setTimeout(function() {
+        compFist.classList.remove("up");
+        playerFist.classList.remove("up");
+        container.classList.remove("containerUp");
+    }, timerDown); /* milliseconds, so .025 seconds*/
+}
+
+const shake = () => {
+        
+    let playerFist = document.querySelector(".playerMove");
     let compFist = document.querySelector(".compMove");
     let container = document.querySelector(".animation");
 
-    compFist.classList.add("up");
-    container.classList.add("containerUp");
-    
-    //move down
-    setTimeout(function() {
-        compFist.classList.remove("up");
-        container.classList.remove("containerUp");
-    }, 250); /* milliseconds, so .025 seconds*/
+    //change back to rock
+    compFist.setAttribute("src", "images/computerRock.png");
+    document.querySelector(".playerMove").setAttribute("src", "images/playerRock.png");
 
-    //move down
-    setTimeout(function() {
-        compFist.classList.add("up");
-        container.classList.add("containerUp");
-    }, 500); /* milliseconds, so .05 seconds*/
-
-    //move down
-    setTimeout(function() {
-        compFist.classList.remove("up");
-        container.classList.remove("containerUp");
-    }, 750); /* milliseconds, so .075 seconds*/
-
-    //move down
-    setTimeout(function() {
-        compFist.classList.add("up");
-        container.classList.add("containerUp");
-    }, 1000); /* milliseconds, so .1 seconds*/
-
-    //move down
-    setTimeout(function() {
-        compFist.classList.remove("up");
-        container.classList.remove("containerUp");
-    }, 1250); /* milliseconds, so .125 seconds*/
-
-    let playerFist = document.querySelector(".playerMove");
-
-    playerFist.classList.add("up");
-    container.classList.add("containerUp");
-    
-    //move down
-    setTimeout(function() {
-        playerFist.classList.remove("up");
-        container.classList.remove("containerUp");        
-    }, 250); /* milliseconds, so .025 seconds*/
-
-    //move down
-    setTimeout(function() {
-        playerFist.classList.add("up");
-        container.classList.add("containerUp");
-    }, 500); /* milliseconds, so .05 seconds*/
-
-    //move down
-    setTimeout(function() {
-        playerFist.classList.remove("up");
-        container.classList.remove("containerUp");   
-    }, 750); /* milliseconds, so .075 seconds*/
-
-    //move down
-    setTimeout(function() {
-        playerFist.classList.add("up");
-        container.classList.add("containerUp");
-    }, 1000); /* milliseconds, so .1 seconds*/
-
-    //move down
-    setTimeout(function() {
-        playerFist.classList.remove("up");
-        container.classList.remove("containerUp");   
-    }, 1250); /* milliseconds, so .125 seconds*/
+    // shakes possibly create a loop to increment the timer, calling moveUp, moveDown less times
+    moveUp(compFist, playerFist, container, 0);
+    moveDown(compFist, playerFist, container, 250);
+    moveUp(compFist, playerFist, container, 500);
+    moveDown(compFist, playerFist, container, 750);
+    moveUp(compFist, playerFist, container, 1000);
+    moveDown(compFist, playerFist, container, 1250);
 }
