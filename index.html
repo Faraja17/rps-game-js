@@ -42,10 +42,18 @@
       <p class="report">🚩 Losses: 0, Ties: 0, Wins: 0 🚩</p> <!--JavaScript will do the calculations. Whe computer wins, the left flag will display. When the player wins, the right will display.-->
     </section>
     <hr>
-<footer>
-  
-  Coded with ❤️ by Faraja
+
+<footer> 
+  <p class="copyright"> &copy; <span id="copyright"></span> Faraja Thompson</p>
 </footer>
+
+<script>
+  // Get current year
+  const year = new Date().getUTCFullYear();
+  // Insert year into HTML
+  document.getElementById("copyright").innerHTML = year;
+</script>
+
 <script src="scripts/index.js"></script>
   </body>
 </html>
