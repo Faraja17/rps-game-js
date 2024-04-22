@@ -260,7 +260,7 @@ footer {
 @media screen and (min-width: 1200px) {
 footer {
     text-align: center;
-    font-size: small;
+    font-size: medium;
     padding: 0;
 }
 }
