@@ -255,6 +255,7 @@ footer {
     text-align: center;
     font-size: medium;
     padding: 5%;
+    background-color: rgb(222, 247, 247);
 }
 
 @media screen and (min-width: 1200px) {
